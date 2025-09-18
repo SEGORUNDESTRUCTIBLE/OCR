@@ -1,0 +1,11 @@
+[Unit]
+Description=Instant OCR service
+
+[Service]
+User=jules
+ExecStart=/usr/bin/python3 /app/main.py
+Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target
